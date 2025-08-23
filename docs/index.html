@@ -5,29 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link href="./output.css" rel="stylesheet">
-</head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+</head>
+<style>
+    html{
+      scroll-behavior: smooth; /* Enables smooth scrolling */
+      scroll-padding-top: 70px; /* Adjust this to match navbar height */
+    }
+  </style>
 <body class="">
 
   <!-- Navbar -->
-  <div class="fixed top-0  left-0 h-20 w-full flex justify-evenly items-center bg-white/50 backdrop-blur-md shadow-sm">
-    <div class="font-bold text-lg">Aman Jangra</div>
+  <div class="fixed top-0  left-0 h-20 w-full flex justify-between md:justify-evenly items-center bg-white/50 backdrop-blur-md shadow-sm">
+    <div class="font-bold text-lg ml-3 md:ml-0 "> <a href="index.html">Aman Jangra</a> </div>
 
-    <div class="flex justify-evenly gap-8 text-[rgb(34,40,49)]">
-      <div>Projects</div>
-      <div>Skills</div>
-      <div>Experience</div>
-      <div>About</div>
-      <div>Contact</div>
+    
+    <div class=" hidden md:flex justify-evenly gap-8 text-[rgb(34,40,49)] ">
+      <div class=""> <a href="#projects"> Projects</a></div>
+      <div> <a href="#Skills">Skills</a> </div>
+      <div> <a href="#Experience"> Experience</a></div>
+      <div> <a href="#About"> About</a></div>
+      <div> <a href="#Contact">Contact</a> </div>
     </div>
 
-    <div class="cursor-pointer">Dark</div>
+    <div class="flex mr-3 md:mr-0">
+
+        <div class="cursor-pointer border h-10 w-13 flex justify-center items-center ">Dark</div>
+        <div><i class="fa-brands fa-github"></i></div>
+ 
+        <div class="md:hidden pl-5">
+          <button type="submit" class="border h-10 w-13 flex justify-center items-center menu " > Menu</button>
+        </div>
+
+    </div>
+
   </div>
 
-  <!-- Main Content -->
-  <div class="w-full border min-h-screen  pt-20">
-    <div class="h-400 w-full bg-[#F0F8FB] text-9xl  ">Main Box</div>
+  <div class="h-80 w-95 border hidden fixed top-20 left-4 rounded-2xl shadow-2xl bg-white md:hidden menu_data">
+    <ol class="ml-10 text-2xl">
+      <li class="mb-5 mt-5 same_a"><a href="#projects"> Projects</a></li>
+      <li class="mb-5 same_a"><a href="#Skills">Skills</a></li>
+      <li class="mb-5 same_a"><a href="#Experience"> Experience</a></li>
+      <li class="mb-5 same_a"><a href="#About"> About</a></li>
+      <li class="mb-5 same_a"><a href="#Contact">Contact</a></li>
+    </ol>
   </div>
+  <!-- Main Content -->
+   
+  <div class="w-full border min-h-screen  pt-20 h-400 bg-[#F0F8FB]">
+    <!-- Hero section  -->
+    <section id="hero_section">
+      <div class="flex-col justify-center items-center  ">
+
+          <div class="h-9 text-[#616576] w-35 text-sm border rounded-2xl flex justify-center items-center mx-auto mt-20  ">
+            Front-End Developer 
+          </div>
+          
+          <div class=" h-auto w-auto font-bold text-2xl mx-auto text-center ml-5 mr-5 mt-3">
+           <div>Hi,I'm</div>
+           <div><span class="font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent ">Aman jangra</span> , A passionate</div>
+           <div>Frontend Developer creating clean and</div>
+           <div>responsive web designs</div>
+          </div>
+
+          <div class="text-lg text-center mt-5 text-[#616576]">
+            I enjoy crafting responsive UIs, solving JavaScript problems, and learning new things every day. Below are some of my favorite projects and the skills I use.
+          </div>
+
+          <div class="flex justify-center items-center mt-7  ">
+
+            <div class="h-12 w-25 border-2  border-[#616576] mr-10 flex justify-center items-center rounded-2xl">
+              Contact Me
+            </div>
+
+            <div class="h-12 w-25 border-2  border-[#616576] flex justify-center items-center rounded-2xl">
+              See Projects
+            </div>
+
+          </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="font-bold text-2xl ">Projects</div>
+    </section>
+
+    <section id="Skills">
+      Skills
+    </section>
+    <section id="Experience">
+      Experience
+    </section>
+    <section id="About">
+      About
+    </section>
+    <section id="Contact">
+      Contact
+    </section>
+  </div>
+
 
 </body>
+<script src="script.js"></script>
 </html>
