@@ -7,7 +7,7 @@ let t_w = document.querySelectorAll(".t_w");
 let nav = document.querySelector(".nav");
 let moon = document.querySelector(".moon");
 let sm_cl = document.querySelectorAll(".sm_cl");
-
+let bg_change = document.querySelector(".bg_change")
 
 let menu_v = true;
 menu_btn.addEventListener("click" , ()=>{
@@ -32,9 +32,13 @@ function darkmode(){
         i.style.color = "white";
     });
     sm_cl.forEach(e => {
-        e.classList.add("text-gray-400");
-        e.classList.remove("black")
-    });
+    e.classList.add("text-gray-500");
+    e.classList.remove("text-black");
+    
+    bg_change.classList.remove("bg-white");
+    bg_change.classList.add("bg-[#0B1020]");
+});
+
 
     nav.classList.remove("bg-white/50"); // remove white
     nav.classList.add("bg-[#0B1020]/50"); // add dark
@@ -52,9 +56,11 @@ function darkmode(){
     });
 
     sm_cl.forEach(e => {
-        e.classList.add("black");
-        e.classList.remove("text-gray-400")
-    });
+    e.classList.add("text-black");
+    e.classList.remove("text-gray-400");
+    bg_change.classList.add("bg-white");
+    bg_change.classList.remove("bg-[#0B1020]");
+});
 
 
     
